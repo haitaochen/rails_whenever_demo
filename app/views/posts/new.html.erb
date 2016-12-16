@@ -1,0 +1,10 @@
+<%= form_for :post,:remote=>true,url: posts_path do |f| %>
+<!-- 每次都要写成:remote=>true或者remote:true,最终解析成HTML为：(a标签属性中的)data-remote="true"  -->
+<!-- 这时跳到控制器中的create方法 -->
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <%= f.submit %>
+<% end %>
+<p id="content"></p>

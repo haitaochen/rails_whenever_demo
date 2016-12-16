@@ -1,0 +1,7 @@
+<p><%= @post.name %></p>
+<%= link_to '删除',post_path(@post.id),method: :delete,:remote=>'true' %>
+<!--以上为ajax删除-->
+
+<!--解析为：<a data-remote="true" rel="nofollow" data-method="delete" href="/posts/6">删除</a>-->
+
+<!--跳转到destroy方法-->
